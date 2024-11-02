@@ -1,0 +1,12 @@
+<h2>Lista Personajes</h2>
+@for (item of listaCharacters; track $index) {
+
+    <app-character-card (eliminarEvent)="deletePersonaje($event)" (navegarEvent)="navegar($event)" [character]="item"></app-character-card>
+}
+@empty {
+    <p>Aun no hay personajes</p>
+}
+<br>
+<br>
+<br>
+<button (click)="irForm()">Agregar nuevo Personajes</button>
